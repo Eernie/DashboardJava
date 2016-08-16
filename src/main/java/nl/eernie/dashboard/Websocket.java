@@ -1,24 +1,33 @@
 package nl.eernie.dashboard;
 
-import javax.websocket.*;
+import javax.websocket.OnClose;
+import javax.websocket.OnError;
+import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
+import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
 @ServerEndpoint("/rest/ws")
-public class Websocket {
-    @OnOpen
-    public void open(Session session) {
-        System.out.println(session);
-    }
+public class Websocket
+{
+	@OnOpen
+	public void open(Session session)
+	{
+		System.out.println(session);
+	}
 
-    @OnClose
-    public void close(Session session) {
-    }
+	@OnClose
+	public void close(Session session)
+	{
+	}
 
-    @OnError
-    public void onError(Throwable error) {
-    }
+	@OnError
+	public void onError(Throwable error)
+	{
+	}
 
-    @OnMessage
-    public void handleMessage(String message, Session session) {
-    }
+	@OnMessage
+	public void handleMessage(String message, Session session)
+	{
+	}
 }
