@@ -1,19 +1,23 @@
 package nl.eernie.dashboard.dao;
 
-public class NamedParameter {
-        private final String name;
-        private final Object value;
+public class NamedParameter
+{
+	private final String name;
+	private final Object value;
 
-        public NamedParameter(String name, Object value) {
-            this.name = name;
-            this.value = value;
-        }
+	public NamedParameter(String name, Object value)
+	{
+		this.name = name;
+		this.value = value;
+	}
 
-        public String getName() {
-            return name;
-        }
+	public String getName()
+	{
+		return name;
+	}
 
-        public Object getValue() {
-            return value;
-        }
-    }
+	public Object getValue()
+	{
+		return value;
+	}
+}
