@@ -3,6 +3,7 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import {MdCardModule} from "@angular2-material/card";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    MdCardModule
   ],
   providers: [],
   entryComponents: [AppComponent],
