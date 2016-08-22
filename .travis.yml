@@ -11,10 +11,10 @@ services:
 before_install:
   - nvm install 6.3.1
   - nvm use 6.3.1
-  - cd frontend && npm install
+  - cd frontend && npm install && cd ..
   - mvn -f backend/pom.xml install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
   - mvn -f backend/pom.xml clean package
-  - cd frontend && npm test
+  - cd frontend && npm test && cd ..
   - docker-compose build
