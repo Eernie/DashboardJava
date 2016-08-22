@@ -11,8 +11,8 @@ services:
 before_install:
   - nvm install 6.3.1
   - nvm use 6.3.1
-  - mvn -f backend/pom.xml install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - cd frontend && npm install
+  - mvn -f backend/pom.xml install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
   - mvn -f backend/pom.xml clean package
