@@ -1,0 +1,18 @@
+sudo: required
+
+language: java
+
+jdk:
+  - oraclejdk8
+
+services:
+  - docker
+
+before_install:
+  - mvn -f backend/pom.xml install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - cd frontend && npm install
+
+script:
+  - mvn -f backend/pom.xml clean test
+  - cd frontend && npm test
+  - docker-compose build
