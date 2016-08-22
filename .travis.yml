@@ -13,6 +13,6 @@ before_install:
   - cd frontend && npm install
 
 script:
-  - mvn -f backend/pom.xml clean test
+  - mvn -f backend/pom.xml clean package
   - cd frontend && npm test
   - docker-compose build
