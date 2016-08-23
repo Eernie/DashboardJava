@@ -9,6 +9,7 @@ tmp
 # dependencies
 node_modules
 bower_components
+coverage
 
 # IDEs and editors
 .idea
