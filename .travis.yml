@@ -16,5 +16,5 @@ before_install:
 
 script:
   - mvn -f backend/pom.xml clean package
-  - cd frontend && npm test --watch=false && cd ..
+  - cd frontend && npm test && cd ..
   - docker-compose build
